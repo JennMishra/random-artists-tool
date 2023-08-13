@@ -2231,60 +2231,6 @@ var artists = [
 "László Moholy-Nagy (photography)",
 "Man Ray",
 "Manuel Álvarez Bravo",
-"Nadar (Gaspard-Félix Tournachon)",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
 "Olivia Parker",
 "Oskar Barnack",
 "Patrick Zachmann",
@@ -2322,7 +2268,8 @@ var artists = [
 "William Henry Fox Talbot",
 "William Henry Jackson",
 "Yasuz Nojima",
-"Yousuf Karsh",];
+"Yousuf Karsh"];
+
 
 function getArtists() {
   var randomArtists = [];
@@ -2335,4 +2282,17 @@ function getArtists() {
   }
 
   document.getElementById("artists").innerHTML = randomArtists.join(", ");
+  var copyDiv = document.getElementById("copyText");
+  copyDiv.innerText = "Artwork in the style of " + randomArtists.join(", ");
 }
+
+function copyToClipboard() {
+  var copyText = document.getElementById("copyText");
+  var range = document.createRange();
+  range.selectNode(copyText);
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+}
+

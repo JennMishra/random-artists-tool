@@ -46,9 +46,17 @@
         <a href="https://bit.ly/MtP-Subscribe" target="_blank">Subscribe</a>
         <hr>
     </header>
-        <p>Try prompting for three random artists for a unique mashup style!</p>
-<button onclick="getArtists()">Prompt for 3 Random Artists</button>
-    <div id="artists"></div>
-    <script src="script.js"></script>
+<p>Try prompting for three random artists for a unique mashup style!</p>
+<button onclick="getArtists()" class="random-button">Prompt for 3 Random Artists</button>
+<div id="artists"></div>
+<script src="script.js"></script>
+
+<p id="copyText">/imagine Artwork in the style of </p>
+<button onclick="copyToClipboard()">Copy</button>
+
 </body>
 </html>
+
+
+
+
