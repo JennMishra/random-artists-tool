@@ -1,0 +1,12 @@
+Read Me
+
+Click the button and the tool returns 3 random artists from a list of over 2000 artists recognized by Midjourney. 
+
+Copy the list of artists and run the prompt “Artwork in the style of Artist1, Artist2, Artist2”. 
+
+Feel free to add your own subject and details to the prompt. 
+
+
+Jenn Mishra
+Making The Photo
+https://bit.ly/MtP-Subscribe
