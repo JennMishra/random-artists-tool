@@ -16,6 +16,11 @@ body, html {
     font-size: 18px; /* Increase the base font size */
 }
 
+.text-side a {
+    color: #FE5E32; /* orange color URL*/
+}
+
+
 .image-side {
     width: 50%;
     display: flex;
