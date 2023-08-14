@@ -1,0 +1,55 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+}
+
+.text-side {
+    background-color: black;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 18px; /* Increase the base font size */
+}
+
+.image-side {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-side img {
+    max-width: 100%; /* Reduce the maximum width of the image */
+    height: auto;
+}
+
+#logo {
+    width: 100px; /* Adjust as needed */
+}
+
+h1 {
+    font-size: 40px; /* Increase the size of the main header */
+}
+
+h2 {
+    font-size: 20px; /* Increase the size of the secondary header */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px; /* Increase the size of the button text */
+    margin: 10px 0;
+}
+
+#artists {
+    font-size: 16px; /* Increase the size of the artist text */
+}
