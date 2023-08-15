@@ -2273,18 +2273,22 @@ var artists = [
 
 function getArtists() {
   var randomArtists = [];
-  var tempArtists = [...artists]; // Create a temporary copy to avoid altering the original array
+  var randomArtistsWithLinks = [];
+  var tempArtists = [...artists];
 
   for (var i = 0; i < 3; i++) {
     var randomIndex = Math.floor(Math.random() * tempArtists.length);
-    randomArtists.push(tempArtists[randomIndex]);
-    tempArtists.splice(randomIndex, 1); // Remove the selected artist from the temporary array
+    var selectedArtist = tempArtists[randomIndex];
+    randomArtists.push(selectedArtist);
+    randomArtistsWithLinks.push('<a href="https://www.google.com/search?q=' + selectedArtist + '&tbm=isch" target="_blank">' + selectedArtist + '</a>');
+    tempArtists.splice(randomIndex, 1);
   }
 
-  document.getElementById("artists").innerHTML = randomArtists.join(", ");
+  document.getElementById("artists").innerHTML =  randomArtistsWithLinks.join(" ");
   var copyDiv = document.getElementById("copyText");
   copyDiv.innerText = "Artwork in the style of " + randomArtists.join(", ");
 }
+
 
 function copyToClipboard() {
   var copyText = document.getElementById("copyText");
